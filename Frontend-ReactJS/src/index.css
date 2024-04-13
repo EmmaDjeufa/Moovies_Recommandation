@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.catButton {
+  margin-bottom: 20px;
+}
+
+.primaryBtn {
+  background-color: #1c0e2c;
+  color: #e8f3e8ea;
+  border: 5px solid #2b0d0d;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  
+}
+.container .img{
+  border: 2px solid #985fd5;
+  margin-bottom: 20px; 
+}
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(174, 26, 26, 0.5);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-width: 7px;
+}
+
+.overlay .text-container {
+  font-size: 11px;/* Taille de police pour les éléments de texte */
+}
+
+.overlay h3 {
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+
+.overlay span {
+  font-size: 12px; /* Taille de police pour les éléments de texte */
+}
+
+.img {
+  width: 100%; /* Largeur fixe */
+  height: 100%; /* Hauteur fixe */
+  object-fit: cover; /* Assure que l'image occupe toute la zone spécifiée */
+
+}
+
+body {
+  font-size: 20px; /* Taille de police de base */
+}
+
+@media only screen and (max-width: 1110px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .text {
+    width: 100%;
+  }
+  .catButton {
+    width: 100%;
+  
+  }
+  .blog {
+    width: 100%;
+  }
+  .contact {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 898px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .text {
+    width: 100%;
+  }
+  .catButton {
+    width: 100%;
+    
+  }
+  .blog {
+    width: 100%;
+  }
+  .contact {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 466px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .text {
+    width: 100%;
+  }
+  .catButton {
+    width: 100%;
+    
+  }
+  .blog {
+    width: 100%;
+  }
+  .contact {
+    width: 100%;
+  }
+}
+
+
+.nav a {
+  font-size: 2em; 
+}
+.fontSize {
+  color: #e4f1e6; 
+  font-weight: bold;
+}
+
