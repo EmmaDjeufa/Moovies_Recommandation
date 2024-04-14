@@ -14,7 +14,10 @@ export const Connexion = () => {
                   <input type='email' placeholder='Email' data-aos='flip-right' />
                   <input type='password' placeholder='Mot de passe' data-aos='flip-right' />
                 </div>
-                <button data-aos='zoom-in-up'>Envoyer</button>
+                <a href="/contenu" >
+                  <button type='submit' data-aos='zoom-in-up'>Envoyer</button>
+                </a>
+                
               </form>
             </div>
           </div>

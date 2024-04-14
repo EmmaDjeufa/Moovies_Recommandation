@@ -46,16 +46,16 @@ export const Inscription = () => {
             <div className='right'>
               <form onSubmit={handleSubmit}>
                 <div className='flex'>
-                  <input type='text' name="nom" placeholder='Nom' value={formData.nom} onChange={handleChange} data-aos='flip-left' />
-                  <input type='text' name="prenom" placeholder='Prenom' value={formData.prenom} onChange={handleChange} data-aos='flip-left' />
+                  <input type='text' name="nom" placeholder='*Nom' required value={formData.nom} onChange={handleChange} data-aos='flip-left' />
+                  <input type='text' name="prenom" placeholder='*Prenom' required value={formData.prenom} onChange={handleChange} data-aos='flip-left' />
                 </div>
                 <div className='flex'>
-                  <input type='email' name="email" placeholder='Email' value={formData.email} onChange={handleChange} data-aos='flip-right' />
-                  <input type='password' name="mot_de_passe" placeholder='Mot de passe' value={formData.mot_de_passe} onChange={handleChange} data-aos='flip-right' />
+                  <input type='email' name="email" placeholder='*Email' required value={formData.email} onChange={handleChange} data-aos='flip-right' />
+                  <input type='password' name="mot_de_passe" placeholder='*Mot de passe' required value={formData.mot_de_passe} onChange={handleChange} data-aos='flip-right' />
                 </div>
                 <div className='flex'>
                   <input type='text' name="adresse" placeholder='Adresse Postale' value={formData.adresse} onChange={handleChange} data-aos='flip-right' />
-                  <input type="tel" id="telephone" name="telephone" placeholder='Format : XXX-XXX-XXXX' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required value={formData.telephone} onChange={handleChange} />
+                  <input type="tel" id="telephone" name="telephone" placeholder='Format : XXX-XXX-XXXX' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={formData.telephone} onChange={handleChange} />
                 </div>
                 <div className='flex'>
                   <select name="type_de_film_prefere" id="typeFilm" required value={formData.type_de_film_prefere} onChange={handleChange}>
@@ -65,7 +65,9 @@ export const Inscription = () => {
                     <option value="Drame">Drame</option>
                   </select>
                 </div>
+                <a href="/contenu" >
                 <button type="submit" data-aos='zoom-in-up'>Envoyer</button>
+                </a>
               </form>
             </div>
           </div>

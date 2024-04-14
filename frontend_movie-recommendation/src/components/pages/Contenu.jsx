@@ -48,7 +48,7 @@ export const Contenu = () => {
           <div>
             <h2>Préférences utilisateur</h2>
             <label>
-              Genre préféré :
+              Genre préféré...
               <select name="genre" onChange={handlePreferenceChange}>
                 <option value="">Sélectionnez un genre</option>
                 <option value="action">Action</option>

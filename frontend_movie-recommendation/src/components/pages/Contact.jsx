@@ -49,7 +49,10 @@ export const Contact = () => {
                 </div>
                 <input type='text' name='sujet' placeholder='Sujet' value={formData.sujet} onChange={handleChange} data-aos='flip-up' />
                 <textarea name='message' placeholder='Message' value={formData.message} onChange={handleChange} data-aos='flip-down'></textarea>
-                <button type='submit' data-aos='zoom-in-up'>Envoyer</button>
+                
+                <a href="/contenu" >
+                  <button type='submit' data-aos='zoom-in-up'>Envoyer</button>
+                </a>
               </form>
             </div>
           </div>
