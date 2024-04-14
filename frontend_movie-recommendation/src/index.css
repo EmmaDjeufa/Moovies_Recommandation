@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 999px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.catButton {
+  margin-bottom: 5px;
+}
+
+.primaryBtn {
+  background-color: #1c0e2c;
+  color: #e8f3e8ea;
+  border: 5px solid #2b0d0d;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  
+}
+.container .img{
+  border: 2px solid #dcdbe3;
+  margin-bottom: 20px; 
+  width: 700px;
+  height: 310px;
+}
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(174, 26, 26, 0.5);
+  color: #340303;
+  padding: 10px;
+  text-align: center;
+  border-width: 7px;
+}
+.container p {
+  font-size: 18px;
+  color: #191a18;
+}
+
+.overlay .text-container p {
+  font-size: 18px;
+}
+
+.overlay .text-container span {
+  font-size: 16px;
+}
+
+.overlay .text-container {
+  font-size: 16px;/* Taille de police pour les éléments de texte */
+}
+
+.overlay h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+
+.overlay span {
+  font-size: 12px; /* Taille de police pour les éléments de texte */
+}
+
+
+body {
+  font-size: 20px; /* Taille de police de base */
+}
+.nav a {
+  font-size: 2em; 
+}
+.fontSize {
+  color: #e3ede6; 
+  font-weight: bold;
+}
