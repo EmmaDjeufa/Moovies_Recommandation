@@ -19,20 +19,6 @@ export const Home = () => {
                   loop: true,
                 }}
               />
-              <Typewriter
-                options={{
-                  strings: [`${val.post}`],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-              <Typewriter
-                options={{
-                  strings: [ `${val.design}`],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
             </h2>
             <a href="/contenu" >
             <button className='primaryBtn' data-aos='fade-up-right'>

@@ -36,8 +36,8 @@ export const navlink = [
 
 export const home = [
   {
-    text: "HELLO !!! JE SUIS :",
-    name: "Emmanuella NGOUGUE DJEUFA",
+    text: "HELLO !!! Bienvenue sur notre site de recommandation de films:",
+    name: "Découvrez les films populaires et obtenez des recommandations personnalisées en fonction de vos préférences.",
     post: "En dernière année d'ingénieur en informatique",
     design: "En spécialité de Cloud Computing, et suis spécialement:",
     design1:"Organisée, avec un esprit d'analyse et de synthèse, ",
