@@ -54,10 +54,8 @@ export const Contenu = () => {
                 <option value="action">Action</option>
                 <option value="comedy">Comédie</option>
                 <option value="drama">Drame</option>
-                {/* Ajoutez d'autres options de genre si nécessaire */}
               </select>
             </label>
-            {/* Ajoutez d'autres critères de préférence si nécessaire */}
             <button onClick={handleRecommendation}>Recommander des films</button>
           </div>
           <div>
