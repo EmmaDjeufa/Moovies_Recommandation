@@ -1,4 +1,4 @@
-/*Contenu.jsx*/
+// Contenu.jsx
 import React, { useState, useEffect } from "react"; 
 import axios from "axios";
 import 'aos/dist/aos.css';
@@ -9,8 +9,6 @@ export const Contenu = () => {
     const [userPreferences, setUserPreferences] = useState({});
     const [recommendedMovies, setRecommendedMovies] = useState([]);
     
-
-
     useEffect(() => {
         // Charger les films populaires depuis l'API TMDb
         axios
@@ -31,11 +29,13 @@ export const Contenu = () => {
     };
 
     const handleRecommendation = () => {
-        // Envoyer les préférences utilisateur au backend pour recommander des films
+        // Envoyer les préférences utilisateur à l'API TMDb pour recommander des films
         axios
-        .post("/recommendations", { preferences: userPreferences })
+        .get(
+            `https://api.themoviedb.org/3/discover/movie?api_key=f35d6c8d1b4b8445385c5274ccfce88f&language=fr-FR&with_genres=${userPreferences.genre}`
+        )
         .then((response) => {
-            setRecommendedMovies(response.data);
+            setRecommendedMovies(response.data.results);
         })
         .catch((error) => {
             console.error("Erreur lors de la recommandation de films :", error);
@@ -51,12 +51,23 @@ export const Contenu = () => {
               Genre préféré...
               <select name="genre" onChange={handlePreferenceChange}>
                 <option value="">Sélectionnez un genre</option>
-                <option value="action">Action</option>
-                <option value="comedy">Comédie</option>
-                <option value="drama">Drame</option>
+                <option value="28">Action</option>
+                <option value="35">Comédie</option>
+                <option value="18">Drame</option>
               </select>
             </label>
             <button onClick={handleRecommendation}>Recommander des films</button>
+          </div>
+          <div>
+            
+            <ul>
+              {recommendedMovies.map((movie) => (
+                <li key={movie.id}>
+                  <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+                  <p>{movie.title}</p>
+                </li>
+              ))}
+            </ul>
           </div>
           <div>
             <h2>Films populaires</h2>
@@ -69,16 +80,7 @@ export const Contenu = () => {
               ))}
             </ul>
           </div>
-          <div>
-            <h2>Films recommandés</h2>
-            <ul>
-              {recommendedMovies.map((movie) => (
-                <li key={movie.id}>{movie.title}</li>
-              ))}
-            </ul>
-          </div>
         </div>
     );
 }
-
 

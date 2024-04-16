@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Heading } from "../common/Heading";
-import axios from "axios"; // Importez axios pour envoyer des requêtes HTTP
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 export const Connexion = () => {
   const [email, setEmail] = useState("");
@@ -46,9 +47,12 @@ export const Connexion = () => {
                 <button type='submit' data-aos='zoom-in-up'>
                   Envoyer
                 </button>
-                <button type='submit' href="/contenu" data-aos='zoom-in-up'>
-                  Retour
-                </button>
+                {/* Utilisation de Link pour le bouton de retour */}
+                <Link to="/contenu">
+                  <button data-aos='zoom-in-up'>
+                    Retour
+                  </button>
+                </Link>
               </form>
             </div>
           </div>
@@ -56,5 +60,6 @@ export const Connexion = () => {
       </div>
     </>
   );
-};
+}
+
 

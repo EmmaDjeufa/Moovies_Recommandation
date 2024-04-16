@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Heading } from "../common/Heading";
+import { Link } from "react-router-dom";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -54,6 +55,11 @@ export const Contact = () => {
                   <button type='submit' data-aos='zoom-in-up'>Envoyer</button>
                 </a>
               </form>
+              <Link to="/contenu">
+                  <button data-aos='zoom-in-up'>
+                    Retour
+                  </button>
+              </Link>
             </div>
           </div>
         </div>
