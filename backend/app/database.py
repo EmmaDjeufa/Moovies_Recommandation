@@ -1,12 +1,14 @@
-# database.py
-# -*- coding: utf-8 -*-
-
 from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
 
-# Configuration de la base de données PostgreSQL
-SQLALCHEMY_DATABASE_URL = "postgresql://emmaProj_archMICserv:emma1234*@localhost/users"  
+# Configuration de la base de données MySQL
+DB_USERNAME = "root"
+DB_PASSWORD = "Emm@1234*"
+DB_HOST = "localhost"
+DB_PORT = 3306
+DB_NAME = "Recom_db"
+SQLALCHEMY_DATABASE_URL = f"mysql+mysqlconnector://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
 # Création d'une instance de moteur SQLAlchemy
 engine = create_engine(SQLALCHEMY_DATABASE_URL)

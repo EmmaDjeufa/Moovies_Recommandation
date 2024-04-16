@@ -47,6 +47,7 @@ export const Contenu = () => {
           <h1>Recommandation de films</h1>
           <div>
             <h2>Préférences utilisateur</h2>
+            <p>Sélectionner votre genre préféré et cliquer sur "Recommander des films" pour afficher un ensemble de cette catégorie films</p>
             <label>
               Genre préféré...
               <select name="genre" onChange={handlePreferenceChange}>
@@ -70,7 +71,7 @@ export const Contenu = () => {
             </ul>
           </div>
           <div>
-            <h2>Films populaires</h2>
+            <h2>Autres films populaires</h2>
             <ul>
               {movies.map((movie) => (
                 <li key={movie.id}>

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Heading } from "../common/Heading";
+import { Link } from "react-router-dom";
 
 export const Inscription = () => {
   const [formData, setFormData] = useState({
@@ -56,7 +57,7 @@ export const Inscription = () => {
                 </div>
                 <div className='flex'>
                   <input type='text' name="adresse" placeholder='Adresse Postale' value={formData.adresse} onChange={handleChange} data-aos='flip-right' />
-                  <input type="tel" id="telephone" name="telephone" placeholder='Format : XXX-XXX-XXXX' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={formData.telephone} onChange={handleChange} />
+                  <input type="tel" id="telephone" name="telephone" placeholder='Tel;Format : XXX-XXX-XXXX' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={formData.telephone} onChange={handleChange} />
                 </div>
                 <div className='flex'>
                   <select name="type_de_film_prefere" id="typeFilm" required value={formData.type_de_film_prefere} onChange={handleChange}>
@@ -66,9 +67,9 @@ export const Inscription = () => {
                     <option value="Drame">Drame</option>
                   </select>
                 </div>
-                <a href="/contenu" >
+                <Link to="/contenu">
                 <button type="submit" data-aos='zoom-in-up'>Envoyer</button>
-                </a>
+              </Link>
               </form>
             </div>
           </div>

@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./frontend_movie-recommendation
+    ports:
+      - "3000:3000" 
+    depends_on:
+      - backend 
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"  # Port sur lequel l'application FastAPI sera exposée
+    environment:
+      - DATABASE_URL=postgresql://emmaProj_archMICserv:1234emma*#@localhost/users  # URL de la base de données PostgreSQL
