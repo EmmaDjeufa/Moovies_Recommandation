@@ -15,4 +15,4 @@ services:
     ports:
       - "8000:8000"  # Port sur lequel l'application FastAPI sera exposée
     environment:
-      - DATABASE_URL=postgresql://emmaProj_archMICserv:1234emma*#@localhost/users  # URL de la base de données PostgreSQL
+    - DATABASE_URL=mysql+mysqlconnector://emmaProj_archMICserv:Emm@1234*@localhost:3306/Recom_db  # URL de la base de données MySQL

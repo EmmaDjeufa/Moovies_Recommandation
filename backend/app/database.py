@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 # Configuration de la base de données MySQL
-DB_USERNAME = "root"
+DB_USERNAME = "emmaProj_archMICserv"
 DB_PASSWORD = "Emm@1234*"
 DB_HOST = "localhost"
 DB_PORT = 3306

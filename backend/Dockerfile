@@ -3,7 +3,7 @@ FROM python:3.8-slim
 
 # Définition de l'argument d'environnement pour la base de données
 ENV MYSQL_DATABASE=Recom_db
-ENV MYSQL_USER=root
+ENV MYSQL_USER=emmaProj_archMICserv
 ENV MYSQL_PASSWORD=Emm@1234*
 ENV MYSQL_HOST=localhost
 
