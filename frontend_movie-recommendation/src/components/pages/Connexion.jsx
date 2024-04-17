@@ -44,9 +44,11 @@ export const Connexion = () => {
                     onChange={(e) => setMotDePasse(e.target.value)}
                   />
                 </div>
-                <button type='submit' data-aos='zoom-in-up'>
-                  Envoyer
-                </button>
+                <Link to="/profil">
+                    <button type='submit' data-aos='zoom-in-up'>
+                      Envoyer
+                    </button>
+                </Link>
                 {/* Utilisation de Link pour le bouton de retour */}
                 <Link to="/contenu">
                   <button data-aos='zoom-in-up'>

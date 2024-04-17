@@ -67,7 +67,7 @@ export const Inscription = () => {
                     <option value="Drame">Drame</option>
                   </select>
                 </div>
-                <Link to="/contenu">
+                <Link to="/connexion">
                 <button type="submit" data-aos='zoom-in-up'>Envoyer</button>
               </Link>
               </form>
